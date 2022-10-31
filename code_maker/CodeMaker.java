@@ -1,15 +1,18 @@
+package code_maker;
+
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
 import java.util.HashMap;
+import java.util.Set;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 public abstract class CodeMaker {
-    private HashMap<Object,JSONObject> blocks;
-
+    protected HashMap<Integer,JSONObject> blocks;
+    protected enum BlockType { START, END, DECLARATION, INPUT, OUTPUT, PCODE, PATTERN, CONDITION, LOOP};
     public CodeMaker(String fileName) throws IOException, org.json.simple.parser.ParseException{
         this.setFile(fileName);
     }
@@ -36,7 +39,7 @@ public abstract class CodeMaker {
         JSONArray jsonArr = (JSONArray) obj.get("blocklist");
         for(int i=0;i<jsonArr.size();i++){
             JSONObject block = (JSONObject) jsonArr.get(i);
-            Object id = block.get("BlockID");
+            int id = (int)block.get("BlockID");
             this.blocks.put(id,block);
         }
     }
@@ -47,9 +50,10 @@ public abstract class CodeMaker {
     public abstract String makeCode();
 
     /*
-    * block을 입력으로 주면 그에 해당하는 Code 자료구조를 반환
-    * */
-    protected abstract Code getCode(JSONObject block);
+     * header들의 set을 입력으로 주면 그에 해당하는 string으로 제작하여 반환
+     * headers : 실행가능한 코드로 변환하고자하는 헤더들의 집합
+     * */
+    protected abstract StringBuffer getHeaderStr(Set<String> headers);
 
 
 }
