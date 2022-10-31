@@ -1,3 +1,7 @@
+/*
+ * 브릿지 코드를 프로그래밍 언어로 바꿔주는 클래스들의 추상클래스
+ * 작성자: 이혁수
+ * */
 package code_maker;
 
 import java.io.FileReader;
@@ -11,6 +15,9 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 public abstract class CodeMaker {
+    /*
+    * blocks : 각 순서도 블록들에 해당하는
+    * */
     protected HashMap<Integer,JSONObject> blocks;
     protected enum BlockType { START, END, DECLARATION, INPUT, OUTPUT, PCODE, PATTERN, CONDITION, LOOP};
     public CodeMaker(String fileName) throws IOException, org.json.simple.parser.ParseException{
