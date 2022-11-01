@@ -8,9 +8,9 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 class Transform_Output
-{
-    public String finalstring;
-    public String headerfile="<iostream>";
+{ // 출력 순서도에 대한 호출 함수
+    public String finalstring; // C++로 변환된 코드를 저장하는 변수
+    public String headerfile="<iostream>"; // 출력을 위해서는 iostream 헤더파일이 필요하다.
 
 
     public void output() throws IOException,ParseException{

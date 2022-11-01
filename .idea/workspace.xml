@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3f9bf13-d423-4fab-b283-56c9dba8e1e9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NCD-Program_Clover.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Transform_Cpp/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Transform_Cpp/Output_Storage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Transform_Cpp/Transform_Define.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Transform_Cpp/Transform_End.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Transform_Cpp/Transform_Output.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Transform_Cpp/Transform_Start.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Transform_Cpp/Transform_Define.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transform_Cpp/Transform_Define.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Transform_Cpp/Transform_End.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transform_Cpp/Transform_End.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Transform_Cpp/Transform_Output.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transform_Cpp/Transform_Output.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Transform_Cpp/Transform_Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transform_Cpp/Transform_Start.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

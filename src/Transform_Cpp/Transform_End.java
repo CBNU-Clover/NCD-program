@@ -8,7 +8,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
 
-public class Transform_End {
+public class Transform_End { // 끝 순서도에 대한 호출 함수
     public String finalstring;
 
     public void output() throws IOException, ParseException {

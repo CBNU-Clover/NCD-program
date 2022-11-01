@@ -8,7 +8,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
 
-public class Transform_Start {
+public class Transform_Start { // 시작 순서도에 대한 호출 함수
 
     public void output() throws IOException, ParseException {
         JSONParser parser = new JSONParser();
