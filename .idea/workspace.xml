@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3f9bf13-d423-4fab-b283-56c9dba8e1e9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Transform_Cpp/Transform_Action.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Transform_Cpp/Transform_Condition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Transform_Cpp/Transform_Input.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Transform_Cpp/Transform_Loop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Transform_Cpp/Transform_Pattern.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Transform_Cpp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transform_Cpp/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Transform_Cpp/Output_Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transform_Cpp/Output_Storage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Transform_Cpp/Transform_Define.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transform_Cpp/Transform_Define.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Transform_Cpp/Transform_End.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transform_Cpp/Transform_End.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Transform_Cpp/Transform_Output.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transform_Cpp/Transform_Output.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Transform_Cpp/Transform_Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transform_Cpp/Transform_Start.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,17 +35,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/tlsgy/JAVA+Spring/json-simple-1.1.1.jar&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/tlsgy/JAVA+Spring/json-simple-1.1.1.jar",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\tlsgy\JAVA+Spring\NCD-Program_Clover\NCD-Program_Clover\src\Transform_C" />
