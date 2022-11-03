@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3f9bf13-d423-4fab-b283-56c9dba8e1e9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Transform_Cpp/Transform_Action.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Transform_Cpp/Transform_Condition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Transform_Cpp/Transform_Input.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Transform_Cpp/Transform_Loop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Transform_Cpp/Transform_Pattern.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Transform_Cpp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transform_Cpp/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Transform_Cpp/Output_Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transform_Cpp/Output_Storage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Transform_Cpp/Transform_Define.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transform_Cpp/Transform_Define.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Transform_Cpp/Transform_End.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transform_Cpp/Transform_End.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Transform_Cpp/Transform_Output.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transform_Cpp/Transform_Output.java" afterDir="false" />
@@ -28,6 +35,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2Gu3Mn9jSU02t4gPqfdFjs1s2ou" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />

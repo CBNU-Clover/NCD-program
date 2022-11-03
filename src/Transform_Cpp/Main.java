@@ -21,23 +21,23 @@ public class Main {
         switch(typeId){ // 타입 아이디를 인식하여 거기에 맞는 함수를 호출함.
             case 0:
                 Transform_Start startblock=new Transform_Start(); // 시작 순서도에 대한 함수 호출
-                startblock.output(); // 함수가 잘 호출되었는지 검사
+                //startblock.output(); // 함수가 잘 호출되었는지 검사
                 break;
             case 1:
-                Transform_End endblock=new Transform_End(); // 끝 순서도에 대한 함수 호출
-                endblock.output(); // 함수가 잘 호출되었는지 검사
+                Transform_End endblock=new Transform_End(); // 종료 순서도에 대한 함수 호출
+               // endblock.output(); // 함수가 잘 호출되었는지 검사
                 break;
 
             case 2:
                 Transform_Define defineblock=new Transform_Define(); // 선언 순서도에 대한 함수 호출
-                defineblock.output(); // -> JSON 파일안에 JSON 객체를 넣는것이 나을거 같은 느낌(?) -> 한번에 읽어올수 있도록
+               // defineblock.output(); // -> JSON 파일안에 JSON 객체를 넣는것이 나을거 같은 느낌(?) -> 한번에 읽어올수 있도록
                 break;
             case 3:
                 break;
 
             case 4:
                 Transform_Output Output=new Transform_Output(); // 출력 순서도에 대한 함수 호출
-                Output.output(); // 출력 순서도에 대한 JSON 파일을 읽어와서 값 저장 
+                Output.Output_out(); // 출력 순서도에 대한 JSON 파일을 읽어와서 값 저장
                 op_storage.add(new Output_Storage(Output.headerfile,Output.finalstring)); // 헤더파일과 C++로 변환된 코드 저장
                 System.out.println(op_storage.get(0).getHeaderfile()); // 잘 저장되었는지 확인
                 System.out.println(op_storage.get(0).getCode()); // 잘 저장되었는지 확인

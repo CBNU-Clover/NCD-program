@@ -7,21 +7,19 @@ import org.json.simple.parser.ParseException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
+import java.util.ArrayList;
 
-public class Transform_End { // 끝 순서도에 대한 호출 함수
+public class Transform_End { // 종료 순서도에 대한 호출 함수
     public String finalstring;
+    public ArrayList<String> headerfile=new ArrayList<String>();
 
-    public void output() throws IOException, ParseException {
-        JSONParser parser = new JSONParser();
-        //JSON 파일 읽기
-        Reader reader = new FileReader("C:\\Users\\tlsgy\\JAVA+Spring\\Block\\EndBlock.json");
-        JSONObject jsonObject = (JSONObject) parser.parse(reader);
+    public Output_Storage End_out(JSONObject block){
 
-        long BlockType = (Long) jsonObject.get("BlockType");
-        long id = (Long) jsonObject.get("BlockID");
-        long price = (Long) jsonObject.get("NextBlockID");
-        String Return = (String) jsonObject.get("Return");
-        finalstring = "return "+Return;
-        System.out.println(finalstring);
+        long BlockType = (Long) block.get("BlockType");
+        long id = (Long) block.get("BlockID");
+        long price = (Long) block.get("NextBlockID");
+        String Return = (String) block.get("Return");
+        finalstring = "return "+Return+";\n}";
+        return (new Output_Storage(headerfile,finalstring));
     }
 }
