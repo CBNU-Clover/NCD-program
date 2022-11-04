@@ -8,7 +8,7 @@ import java.util.Set;
 public class Main {
     public static void main(String[] args) {
         try {
-            Cpp_CodeMaker codeMaker=new Cpp_CodeMaker("C:/Users/이혁수/IdeaProjects/NCD-program/src/test/testFile4.json");
+            Cpp_CodeMaker codeMaker=new Cpp_CodeMaker("C:/Users/이혁수/IdeaProjects/NCD-program/src/test/testFile2.json");
             System.out.println(codeMaker.makeCode());
         } catch (IOException e) {
             throw new RuntimeException(e);

@@ -92,7 +92,7 @@ public class Cpp_Transform {
         long BlockType = (Long) block.get("BlockType");
         long id = (Long) block.get("BlockID");
         long price = (Long) block.get("NextBlockID");
-        String variable = (String) block.get("Variable");
+        String variable = (String) block.get("Value");
         headerfile.add("iostream");
         finalstring = "std::cout <<"+variable+";\n";
         return (new Output_Storage(headerfile,finalstring)); //Output_Storage 객체를 생성하고 값을 집어넣은 다음 반환
