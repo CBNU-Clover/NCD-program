@@ -1,25 +1,21 @@
-package Transform_Cpp;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.Reader;
+package code_maker.Transform_Cpp;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import code_maker.Output_Storage;
 import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 
 public class Transform_Loop { //반복문 순서도에 대한 호출 함수
 
-    public String finalstring; // C++로 변환된 코드를 저장하는 변수
-    public ArrayList<String>headerfile=new ArrayList<String>(); // 출력을 위해서는 iostream 헤더파일이 필요하다.
-    public ArrayList<Integer> TypeId=new ArrayList<Integer>(); // while문 { } 안에 있는 순서도가 저장되어 있는 arraylist
+
     // 이제 이 아이디를 어떻게 가져올것인가??
 
 
 
-    public Output_Storage Loop_out(JSONObject block){
-
+    public static Output_Storage Loop_out(JSONObject block){
+        String finalstring; // C++로 변환된 코드를 저장하는 변수
+        ArrayList<String>headerfile=new ArrayList<String>(); // 출력을 위해서는 iostream 헤더파일이 필요하다.
+        ArrayList<Integer> TypeId=new ArrayList<Integer>(); // while문 { } 안에 있는 순서도가 저장되어 있는 arraylist
         int i=0;
         long BlockType = (Long) block.get("BlockType");
         long id = (Long) block.get("BlockID");

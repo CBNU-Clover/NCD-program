@@ -4,10 +4,12 @@
 * */
 package code_maker;
 
+import code_maker.Transform_Cpp.Transform_Start;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.Stack;
@@ -47,19 +49,22 @@ public class Cpp_CodeMaker extends CodeMaker {
         //TODO: test 필요
         int now=0;
         Stack<Integer> stack=new Stack<Integer>();
-        Code code;
+        Output_Storage output;
         while(now!=-1){
             JSONObject block=blocks.get(now);
             int type=(int)block.get("BlockType");
 
             switch ((int) block.get("BlockType")) {
+                case 0:
+                    output= Transform_Start.Start_out(block);
+                    break;
                 default:
-                    code=new Code();
+                    output=new Output_Storage(new ArrayList<>(),"");
                     break;
             }
 
-            headers.addAll(code.headerFile);
-            result.append(code.code);
+            headers.addAll(output.headerFile);
+            result.append(output.code);
 
             if(type==BlockType.CONDITION.ordinal()||type==BlockType.LOOP.ordinal()){
                 stack.push((int)block.get("End"));
