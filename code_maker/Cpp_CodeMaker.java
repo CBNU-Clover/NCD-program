@@ -52,6 +52,8 @@ public class Cpp_CodeMaker extends CodeMaker {
         Output_Storage output;
         while(now!=-1){
             JSONObject block=blocks.get(now);
+            //System.out.print(now);
+            //System.out.println(block);
             Long type=(Long)block.get("BlockType");
 
             switch (type.intValue()) {
@@ -100,7 +102,7 @@ public class Cpp_CodeMaker extends CodeMaker {
 
             now=(Long) block.get("NextBlockID");
             //다음 블록id가 -1일때 현재 블록탈출
-            if(now==-1&&!stack.isEmpty()){
+            while (now==-1&&!stack.isEmpty()){
                 now=stack.pop();
                 result.append("  ".repeat(stack.size()));
                 result.append("}\n");

@@ -29,7 +29,7 @@ public class Cpp_Transform {
         long Else = (Long) block.get("Else");
         long end=(Long)block.get("End");
         String condition=(String)block.get("Condition");
-        finalstring ="if("+condition+"){";
+        finalstring ="if("+condition+"){\n";
         return (new Output_Storage(headerfile,finalstring)); //Output_Storage 객체를 생성하고 값을 집어넣은 다음 반환
     }
 
