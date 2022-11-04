@@ -1,9 +1,0 @@
-{
-	"BlockType" : 2 ,
-	"BlockID" : 1 ,
-	"NextBlockID" : 2 ,
-	"Datatype" : "int" ,
-	"Identifier" : "num" ,
-	"Initial_value" : "0"
-
-}
