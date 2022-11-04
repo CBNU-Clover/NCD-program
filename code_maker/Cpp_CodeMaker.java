@@ -56,7 +56,31 @@ public class Cpp_CodeMaker extends CodeMaker {
 
             switch ((int) block.get("BlockType")) {
                 case 0:
-                    output= Cpp_Transform.Start_out(block);
+                    output= Cpp_Transform.Start(block);
+                    break;
+                case 1:
+                    output= Cpp_Transform.End(block);
+                    break;
+                case 2:
+                    output= Cpp_Transform.Define(block);
+                    break;
+                case 3:
+                    output= Cpp_Transform.Input(block);
+                    break;
+                case 4:
+                    output= Cpp_Transform.Output(block);
+                    break;
+                case 5:
+                    output= Cpp_Transform.Action(block);
+                    break;
+                case 6:
+                    output= Cpp_Transform.Pattern(block);
+                    break;
+                case 7:
+                    output= Cpp_Transform.Condition(block);
+                    break;
+                case 8:
+                    output= Cpp_Transform.Loop(block);
                     break;
                 default:
                     output=new Output_Storage(new ArrayList<>(),"");
