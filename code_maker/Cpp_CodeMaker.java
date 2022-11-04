@@ -88,6 +88,7 @@ public class Cpp_CodeMaker extends CodeMaker {
             }
 
             headers.addAll(output.headerFile);
+            result.append("  ".repeat(stack.size()+1));
             result.append(output.code);
 
             if(type==BlockType.CONDITION.ordinal()||type==BlockType.LOOP.ordinal()){
