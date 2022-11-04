@@ -88,22 +88,25 @@ public class Cpp_CodeMaker extends CodeMaker {
             }
 
             headers.addAll(output.headerFile);
-            result.append("  ".repeat(stack.size()+1));
+            result.append("  ".repeat(stack.size()));
             result.append(output.code);
 
             if(type==BlockType.CONDITION.ordinal()||type==BlockType.LOOP.ordinal()){
                 stack.push((Long) block.get("End"));
+            }
+            else if(type==BlockType.START.ordinal()){
+                stack.push(-1L);
             }
 
             now=(Long) block.get("NextBlockID");
             //다음 블록id가 -1일때 현재 블록탈출
             if(now==-1&&!stack.isEmpty()){
                 now=stack.pop();
+                result.append("  ".repeat(stack.size()));
                 result.append("}\n");
             }
         }
 
-        result.append("}\n");
 
         //헤더 파일 추가
         StringBuffer headerStr=getHeaderStr(headers);

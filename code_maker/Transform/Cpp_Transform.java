@@ -29,15 +29,7 @@ public class Cpp_Transform {
         long Else = (Long) block.get("Else");
         long end=(Long)block.get("End");
         String condition=(String)block.get("Condition");
-        finalstring ="if("+condition+")\n{";
-        Iterator iter = TypeId.iterator();
-        while(iter.hasNext()) { // if 문 안에 있는 순서도들의 내용을 가져와서 finalstring에 합친다.
-            finalstring+=TypeId.get(i)+"\n";
-            i=i+1;
-        }
-        finalstring+="}";
-        // else 뒤 블럭은 어떻게 하는게 좋을까?? -> 상의를 해봐야 할 것 같다.
-
+        finalstring ="if("+condition+"){";
         return (new Output_Storage(headerfile,finalstring)); //Output_Storage 객체를 생성하고 값을 집어넣은 다음 반환
     }
 
@@ -88,13 +80,7 @@ public class Cpp_Transform {
         String initialization=(String)block.get("Initialization");
         String condition=(String)block.get("Condition");
         String update=(String)block.get("Update");
-        finalstring="for("+initialization+","+condition+","+update+")\n"+"{\n";
-        Iterator iter = TypeId.iterator();
-        while(iter.hasNext()) { // while 문 안에 있는 순서도들의 내용을 가져와서 finalstring에 합친다.
-            finalstring+=TypeId.get(i)+"\n";
-            i=i+1;
-        }
-        finalstring+="}";
+        finalstring="for("+initialization+";"+condition+";"+update+"){\n";
 
 
         return (new Output_Storage(headerfile,finalstring));
