@@ -38,7 +38,7 @@ public class Cpp_CodeMaker extends CodeMaker {
     @Override
     public String makeCode() {
         Set<String> headers=new HashSet<String>();
-        StringBuffer result=new StringBuffer("int main(void){\n");
+        StringBuffer result=new StringBuffer("");
 
         /*
         * 실제 작동되는 코드를 만드는 부분
@@ -47,14 +47,14 @@ public class Cpp_CodeMaker extends CodeMaker {
         //TODO: 들여쓰기 추가
         //TODO: else문 제작
         //TODO: test 필요
-        int now=0;
-        Stack<Integer> stack=new Stack<Integer>();
+        Long now=0L;
+        Stack<Long> stack=new Stack<Long>();
         Output_Storage output;
         while(now!=-1){
             JSONObject block=blocks.get(now);
-            int type=(int)block.get("BlockType");
+            Long type=(Long)block.get("BlockType");
 
-            switch ((int) block.get("BlockType")) {
+            switch (type.intValue()) {
                 case 0:
                     output= Cpp_Transform.Start(block);
                     break;
@@ -91,10 +91,10 @@ public class Cpp_CodeMaker extends CodeMaker {
             result.append(output.code);
 
             if(type==BlockType.CONDITION.ordinal()||type==BlockType.LOOP.ordinal()){
-                stack.push((int)block.get("End"));
+                stack.push((Long) block.get("End"));
             }
 
-            now=(int)block.get("NextBlockID");
+            now=(Long) block.get("NextBlockID");
             //다음 블록id가 -1일때 현재 블록탈출
             if(now==-1&&!stack.isEmpty()){
                 now=stack.pop();

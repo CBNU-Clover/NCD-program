@@ -14,7 +14,7 @@ public class Cpp_Transform {
         long id = (Long) block.get("BlockID");
         long price = (Long) block.get("NextBlockID");
         String code = (String) block.get("Code");
-        finalstring = code;
+        finalstring = code+"\n";
         return (new Output_Storage(headerfile,finalstring)); //Output_Storage 객체를 생성하고 값을 집어넣은 다음 반환
     }
 
@@ -50,7 +50,7 @@ public class Cpp_Transform {
         String datatype  = (String) block.get("Datatype");
         String identifier  = (String) block.get("Identifier");
         String initial_value  = (String) block.get("Initialvalue");
-        finalstring =datatype+" "+identifier+"="+initial_value+";";
+        finalstring =datatype+" "+identifier+"="+initial_value+";\n";
         return (new Output_Storage(headerfile,finalstring)); //Output_Storage 객체를 생성하고 값을 집어넣은 다음 반환
     }
     public static Output_Storage End(JSONObject block){
@@ -60,7 +60,7 @@ public class Cpp_Transform {
         long id = (Long) block.get("BlockID");
         long price = (Long) block.get("NextBlockID");
         String Return = (String) block.get("Return");
-        finalstring = "return "+Return+";\n}";
+        finalstring = "return "+Return+";\n";
         return (new Output_Storage(headerfile,finalstring));
     }
 
@@ -71,7 +71,8 @@ public class Cpp_Transform {
         long id = (Long) block.get("BlockID");
         long price = (Long) block.get("NextBlockID");
         String variable = (String) block.get("Variable");
-        finalstring = "cin >>"+variable+";";
+        headerfile.add("iostream");
+        finalstring = "std::cin >>"+variable+";\n";
         return (new Output_Storage(headerfile,finalstring)); //Output_Storage 객체를 생성하고 값을 집어넣은 다음 반환
     }
 
@@ -106,7 +107,8 @@ public class Cpp_Transform {
         long id = (Long) block.get("BlockID");
         long price = (Long) block.get("NextBlockID");
         String variable = (String) block.get("Variable");
-        finalstring = "cout <<"+variable+";";
+        headerfile.add("iostream");
+        finalstring = "std::cout <<"+variable+";\n";
         return (new Output_Storage(headerfile,finalstring)); //Output_Storage 객체를 생성하고 값을 집어넣은 다음 반환
     }
 
@@ -120,7 +122,7 @@ public class Cpp_Transform {
         String name = (String) block.get("Name");
         String argument=(String)block.get("Argument");
         String return_value=(String)block.get("Return");
-        finalstring =return_value+"="+name+"("+argument+");";
+        finalstring =return_value+"="+name+"("+argument+");\n";
         return (new Output_Storage(headerfile,finalstring)); //Output_Storage 객체를 생성하고 값을 집어넣은 다음 반환
     }
 
@@ -130,7 +132,7 @@ public class Cpp_Transform {
         long BlockType = (Long) block.get("BlockType");
         long id = (Long) block.get("BlockID");
         long price = (Long) block.get("NextBlockID");
-        finalstring = "int main()\n{";
+        finalstring = "int main()\n{\n";
         return (new Output_Storage(headerfile,finalstring)); //Output_Storage 객체를 생성하고 값을 집어넣은 다음 반환
     }
 }

@@ -18,9 +18,10 @@ public abstract class CodeMaker {
     /*
     * blocks : 각 순서도 블록들에 해당하는
     * */
-    protected HashMap<Integer,JSONObject> blocks;
+    protected HashMap<Long,JSONObject> blocks=null;
     protected enum BlockType { START, END, DECLARATION, INPUT, OUTPUT, PCODE, PATTERN, CONDITION, LOOP};
     public CodeMaker(String fileName) throws IOException, org.json.simple.parser.ParseException{
+        blocks=new HashMap<Long,JSONObject>();
         this.setFile(fileName);
     }
 
@@ -29,7 +30,8 @@ public abstract class CodeMaker {
      * fileName : 읽어올 파일의 이름
      * */
     private void clear(){
-        blocks.clear();
+        if(blocks==null)
+            blocks.clear();
     }
 
     /*
@@ -37,7 +39,7 @@ public abstract class CodeMaker {
     * fileName : 읽어올 파일의 이름
     * */
     public void setFile(String fileName)  throws IOException, org.json.simple.parser.ParseException{
-        this.clear();
+        //this.clear();
 
         Reader reader = new FileReader(fileName);
         JSONParser parser = new JSONParser();
@@ -46,7 +48,7 @@ public abstract class CodeMaker {
         JSONArray jsonArr = (JSONArray) obj.get("blocklist");
         for(int i=0;i<jsonArr.size();i++){
             JSONObject block = (JSONObject) jsonArr.get(i);
-            int id = (int)block.get("BlockID");
+            Long id = (Long) block.get("BlockID");
             this.blocks.put(id,block);
         }
     }
