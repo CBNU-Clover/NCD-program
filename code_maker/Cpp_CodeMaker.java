@@ -84,6 +84,9 @@ public class Cpp_CodeMaker extends CodeMaker {
                 case 8:
                     output= Cpp_Transform.Loop(block);
                     break;
+                case 9:
+                    output= Cpp_Transform.Else(block);
+                    break;
                 default:
                     output=new Output_Storage(new ArrayList<>(),"");
                     break;
@@ -93,7 +96,8 @@ public class Cpp_CodeMaker extends CodeMaker {
             result.append("  ".repeat(stack.size()));
             result.append(output.code);
 
-            if(type==BlockType.CONDITION.ordinal()||type==BlockType.LOOP.ordinal()){
+            if(type==BlockType.CONDITION.ordinal()||type==BlockType.LOOP.ordinal()
+            || type==BlockType.ELSE.ordinal()){
                 stack.push((Long) block.get("End"));
             }
             else if(type==BlockType.START.ordinal()){

@@ -19,7 +19,7 @@ public abstract class CodeMaker {
     * blocks : 각 순서도 블록들에 해당하는
     * */
     protected HashMap<Long,JSONObject> blocks=null;
-    protected enum BlockType { START, END, DECLARATION, INPUT, OUTPUT, PCODE, PATTERN, CONDITION, LOOP};
+    protected enum BlockType { START, END, DECLARATION, INPUT, OUTPUT, PCODE, PATTERN, CONDITION, LOOP,ELSE};
     public CodeMaker(String fileName) throws IOException, org.json.simple.parser.ParseException{
         blocks=new HashMap<Long,JSONObject>();
         this.setFile(fileName);

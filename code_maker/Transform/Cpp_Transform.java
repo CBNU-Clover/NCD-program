@@ -21,15 +21,23 @@ public class Cpp_Transform {
     public static Output_Storage Condition(JSONObject block){
         String finalstring; // C++로 변환된 코드를 저장하는 변수
         ArrayList<String>headerfile=new ArrayList<String>(); // 출력을 위해서는 iostream 헤더파일이 필요하다.
-        ArrayList<Integer> TypeId=new ArrayList<Integer>(); // if 문 { } 안에 있는 순서도 아이디가 저장되어 있는 arraylist
-        int i=0;
         long BlockType = (Long) block.get("BlockType");
         long id = (Long) block.get("BlockID");
         long price = (Long) block.get("NextBlockID");
-        long Else = (Long) block.get("Else");
         long end=(Long)block.get("End");
         String condition=(String)block.get("Condition");
         finalstring ="if("+condition+"){\n";
+        return (new Output_Storage(headerfile,finalstring)); //Output_Storage 객체를 생성하고 값을 집어넣은 다음 반환
+    }
+
+    public static Output_Storage Else(JSONObject block){
+        String finalstring; // C++로 변환된 코드를 저장하는 변수
+        ArrayList<String>headerfile=new ArrayList<String>(); // 출력을 위해서는 iostream 헤더파일이 필요하다.
+        long BlockType = (Long) block.get("BlockType");
+        long id = (Long) block.get("BlockID");
+        long price = (Long) block.get("NextBlockID");
+        long end=(Long)block.get("End");
+        finalstring ="else{\n";
         return (new Output_Storage(headerfile,finalstring)); //Output_Storage 객체를 생성하고 값을 집어넣은 다음 반환
     }
 
