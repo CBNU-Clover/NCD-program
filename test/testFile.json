@@ -1,0 +1,36 @@
+{
+  "blocklist": [
+    {
+      "BlockType" : 0,
+      "BlockID" : 0,
+      "NextBlockID" : 1
+    },
+    {
+      "BlockType" : 2,
+      "BlockID" : 1,
+      "NextBlockID" : 2,
+      "Datatype" : "int",
+      "Identifier" : "num",
+      "Initialvalue" : "0"
+    },
+    {
+      "BlockType" : 3,
+      "BlockID" : 2,
+      "NextBlockID" : 3,
+      "Variable" : "num"
+    },
+    {
+      "BlockType" : 4,
+      "BlockID" : 3,
+      "NextBlockID" : 4,
+      "Value" : "num"
+    },
+    {
+      "BlockType" : 1,
+      "BlockID" : 4,
+      "NextBlockID" : -1,
+      "Return":"0"
+    }
+
+  ]
+}
