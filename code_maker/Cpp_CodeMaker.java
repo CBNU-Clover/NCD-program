@@ -49,8 +49,6 @@ public class Cpp_CodeMaker extends CodeMaker {
         Output_Storage output;
         while(now!=-1){
             JSONObject block=blocks.get(now);
-            //System.out.print(now);
-            //System.out.println(block);
             Long type=(Long)block.get("BlockType");
 
             switch (type.intValue()) {
