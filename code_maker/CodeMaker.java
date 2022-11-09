@@ -39,7 +39,6 @@ public abstract class CodeMaker {
     * fileName : 읽어올 파일의 이름
     * */
     public void setFile(String fileName)  throws IOException, org.json.simple.parser.ParseException{
-        //this.clear();
 
         Reader reader = new FileReader(fileName);
         JSONParser parser = new JSONParser();
