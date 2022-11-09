@@ -44,9 +44,6 @@ public class Cpp_CodeMaker extends CodeMaker {
         * 실제 작동되는 코드를 만드는 부분
         * */
 
-        //TODO: 들여쓰기 추가
-        //TODO: else문 제작
-        //TODO: test 필요
         Long now=0L;
         Stack<Long> stack=new Stack<Long>();
         Output_Storage output;
