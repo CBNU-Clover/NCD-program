@@ -40,7 +40,6 @@
       "BlockType" : 7,
       "BlockID" : 6,
       "NextBlockID" : 11,
-      "Else" : -1,
       "End" : -1,
       "Condition" : "num>10"
     },
