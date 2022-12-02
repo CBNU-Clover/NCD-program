@@ -1,31 +1,18 @@
-{ "class": "go.GraphLinksModel",
+{ "class": "GraphLinksModel",
   "linkFromPortIdProperty": "fromPort",
   "linkToPortIdProperty": "toPort",
   "nodeDataArray": [
-    {"category":"Comment", "loc":"360 -10", "text":"Kookie Brittle", "key":-13},
-    {"key":-1, "category":"Start", "loc":"175 0", "text":"Start"},
-    {"key":0,"category":"process", "loc":"-5 75", "text":"Preheat oven to 375 F"},
-    {"key":1, "category":"process", "loc":"175 100", "text":"In a bowl, blend: 1 cup margarine, 1.5 teaspoon vanilla, 1 teaspoon salt"},
-    {"key":2, "category":"process", "loc":"175 200", "text":"Gradually beat in 1 cup sugar and 2 cups sifted flour"},
-    {"key":3, "category":"process", "loc":"175 290", "text":"Mix in 6 oz (1 cup) Nestle's Semi-Sweet Chocolate Morsels"},
-    {"key":4, "category":"process", "loc":"175 380", "text":"Press evenly into ungreased 15x10x1 pan"},
-    {"key":5, "category":"process", "loc":"355 85", "text":"Finely chop 1/2 cup of your choice of nuts"},
-    {"key":6, "category":"process", "loc":"175 450", "text":"Sprinkle nuts on top"},
-    {"key":7, "category":"process", "loc":"175 515", "text":"Bake for 25 minutes and let cool"},
-    {"key":8, "category":"process", "loc":"175 585", "text":"Cut into rectangular grid"},
-    {"key":-2, "category":"End", "loc":"175 660", "text":"Enjoy!"}
+    {"category":"0","text":"Start","key":-1,"loc":"79 37"},
+    {"category":"2","text":"int\nnum\n0","key":-6,"loc":"74 153"},
+    {"category":"3","text":"num","key":-2,"loc":"77 267"},
+    {"category":"4","text":"num","key":-7,"loc":"79 381"},
+    {"category":"1","text":"end","key":-8,"loc":"72 592"},
+    {"category":"4","text":"num","key":-9,"loc":"73 459"}
   ],
   "linkDataArray": [
-    {"from":1, "to":2, "fromPort":"B", "toPort":"T"},
-    {"from":2, "to":3, "fromPort":"B", "toPort":"T"},
-    {"from":3, "to":4, "fromPort":"B", "toPort":"T"},
-    {"from":4, "to":6, "fromPort":"B", "toPort":"T"},
-    {"from":6, "to":7, "fromPort":"B", "toPort":"T"},
-    {"from":7, "to":8, "fromPort":"B", "toPort":"T"},
-    {"from":8, "to":-2, "fromPort":"B", "toPort":"T"},
-    {"from":-1, "to":0, "fromPort":"B", "toPort":"T"},
-    {"from":-1, "to":1, "fromPort":"B", "toPort":"T"},
-    {"from":-1, "to":5, "fromPort":"B", "toPort":"T"},
-    {"from":5, "to":4, "fromPort":"B", "toPort":"T"},
-    {"from":0, "to":4, "fromPort":"B", "toPort":"T"}
+    {"from":-1,"to":-6,"fromPort":"B","toPort":"T","points":[79,73.75,79,83.75,79,91.29121805826823,74,91.29121805826823,74,98.83243611653646,74,108.83243611653646]},
+    {"from":-6,"to":-2,"fromPort":"B","toPort":"T","points":[74,197.16756388346354,74,207.16756388346354,74,223.23991978963215,77,223.23991978963215,77,239.3122756958008,77,249.3122756958008]},
+    {"from":-2,"to":-7,"fromPort":"B","toPort":"T","points":[77,284.6877243041992,77,294.6877243041992,77,318.6874252319336,79,318.6874252319336,79,342.68712615966797,79,352.68712615966797]},
+    {"from":-7,"to":-9,"fromPort":"B","toPort":"T","points":[79,409.31287384033203,79,419.31287384033203,79,420,73,420,73,420.68712615966797,73,430.68712615966797]},
+    {"from":-9,"to":-8,"fromPort":"B","toPort":"T","points":[73,487.31287384033203,73,497.31287384033203,73,523.781436920166,72,523.781436920166,72,550.25,72,560.25]}
   ]}

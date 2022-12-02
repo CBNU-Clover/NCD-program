@@ -32,17 +32,51 @@ public class DiagramModelToBridgeCode {
 
 
 
+
         Map<Long,JSONObject> blocks=new HashMap<Long,JSONObject>();
         JSONArray blocklist=(JSONArray) diagram.get("nodeDataArray");
+        Long nextId=0L;
         for(int i=0;i<blocklist.size();i++){
             JSONObject code=new JSONObject();
             JSONObject block=(JSONObject) blocklist.get(i);
             Long id=(Long) block.get("key");
-            code.put("BlockType",(String) block.get("category"));
+            Long type=Long.parseLong((String) block.get("category"));
+            String value=(String) block.get("text");
+            code.put("BlockType",type);
             code.put("BlockID",id);
+            nextId=Math.min(nextId,id);
+
+            switch (type.intValue()){
+                case 1:
+                    code.put("Return","0");
+                    break;
+                case 2:
+                    TextToAttribute.Define(code,value);
+                    break;
+                case 3:
+                    TextToAttribute.Input(code,value);
+                    break;
+                case 4:
+                    TextToAttribute.Output(code,value);
+                    break;
+                case 5:
+                    TextToAttribute.Action(code,value);
+                    break;
+                case 6:
+                    TextToAttribute.Pattern(code,value);
+                    break;
+                case 7:
+                    TextToAttribute.Condition(code,value);
+                    break;
+                case 8:
+                    TextToAttribute.Loop(code,value);
+                    break;
+            }
 
             blocks.put(id,code);
         }
+
+
 
         JSONArray links = (JSONArray) diagram.get("linkDataArray");
 
@@ -68,4 +102,5 @@ public class DiagramModelToBridgeCode {
         result.put("blocklist",jsonArray);
         return result;
     }
+    
 }
