@@ -21,9 +21,14 @@ public abstract class CodeMaker {
     protected HashMap<Long,JSONObject> blocks=null;
     protected enum BlockType { START, END, DECLARATION, INPUT, OUTPUT, PCODE, PATTERN, CONDITION, LOOP,ELSE};
     public CodeMaker(String fileName) throws IOException, org.json.simple.parser.ParseException{
-        blocks=new HashMap<Long,JSONObject>();
         this.setFile(fileName);
     }
+
+    public CodeMaker(JSONObject obj) throws IOException, org.json.simple.parser.ParseException{
+        makeIdMap(obj);
+    }
+
+
 
     /*
      * 입력받은 파일 이름에 해당하는 json 파일을 읽어와 저장하는 함수
@@ -44,6 +49,15 @@ public abstract class CodeMaker {
         JSONParser parser = new JSONParser();
         JSONObject obj = (JSONObject) parser.parse(reader);
 
+        makeIdMap(obj);
+    }
+
+    /*
+    * 브릿지 코드를 이용해 맵에 블럭들을 채움
+    * obj :
+    * */
+    public void makeIdMap(JSONObject obj){
+        blocks=new HashMap<Long,JSONObject>();
         JSONArray jsonArr = (JSONArray) obj.get("blocklist");
         for(int i=0;i<jsonArr.size();i++){
             JSONObject block = (JSONObject) jsonArr.get(i);
@@ -51,6 +65,8 @@ public abstract class CodeMaker {
             this.blocks.put(id,block);
         }
     }
+
+
 
     /*
     * json파일에서 입력 받은 내용을 이용해 프로그래밍언어로 된 코드 작성

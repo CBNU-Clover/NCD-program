@@ -39,16 +39,17 @@ public class DiagramModelToBridgeCode {
         for(int i=0;i<blocklist.size();i++){
             JSONObject code=new JSONObject();
             JSONObject block=(JSONObject) blocklist.get(i);
-            Long id=(Long) block.get("key");
+            Long id=-((Long) block.get("key"));
             Long type=Long.parseLong((String) block.get("category"));
             String value=(String) block.get("text");
             code.put("BlockType",type);
             code.put("BlockID",id);
-            nextId=Math.min(nextId,id);
+            nextId=Math.max(nextId,id);
 
             switch (type.intValue()){
                 case 1:
                     code.put("Return","0");
+                    code.put("NextBlockID",-1L);
                     break;
                 case 2:
                     TextToAttribute.Define(code,value);
@@ -82,8 +83,8 @@ public class DiagramModelToBridgeCode {
 
         for(int i=0;i<links.size();i++){
             JSONObject edge=(JSONObject)links.get(i);
-            Long from=(Long) edge.get("from");
-            Long to=(Long) edge.get("to");
+            Long from=-((Long) edge.get("from"));
+            Long to=-((Long) edge.get("to"));
 
             JSONObject block=blocks.get(from);
             block.put("NextBlockID",to);
@@ -102,5 +103,5 @@ public class DiagramModelToBridgeCode {
         result.put("blocklist",jsonArray);
         return result;
     }
-    
+
 }

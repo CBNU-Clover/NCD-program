@@ -26,6 +26,10 @@ public class Cpp_CodeMaker extends CodeMaker {
         super(fileName);
     }
 
+    public Cpp_CodeMaker(JSONObject obj) throws IOException, ParseException {
+        super(obj);
+    }
+
     @Override
     protected StringBuffer getHeaderStr(Set<String> headers) {
         StringBuffer result=new StringBuffer("");
@@ -44,7 +48,7 @@ public class Cpp_CodeMaker extends CodeMaker {
         * 실제 작동되는 코드를 만드는 부분
         * */
 
-        Long now=0L;
+        Long now=1L;
         Stack<Long> stack=new Stack<Long>();
         Output_Storage output;
         while(now!=-1){
@@ -107,7 +111,6 @@ public class Cpp_CodeMaker extends CodeMaker {
                 result.append("}\n");
             }
         }
-
 
         //헤더 파일 추가
         StringBuffer headerStr=getHeaderStr(headers);
