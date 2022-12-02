@@ -13,6 +13,12 @@ import java.util.Map;
 
 public class DiagramModelToBridgeCode {
 
+    private String fileName="";
+
+    public DiagramModelToBridgeCode(String fileName){
+        this.fileName=fileName;
+    }
+
     public JSONObject getJson(String fileName){
         JSONObject obj=null;
         try {
@@ -28,7 +34,7 @@ public class DiagramModelToBridgeCode {
 
     public JSONObject getBridgeCode(){
 
-        JSONObject diagram= getJson("src/json_test/testFile.json");
+        JSONObject diagram= getJson(this.fileName);
 
 
 

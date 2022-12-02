@@ -8,7 +8,7 @@ import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
-        DiagramModelToBridgeCode bridgeCode=new DiagramModelToBridgeCode();
+        DiagramModelToBridgeCode bridgeCode=new DiagramModelToBridgeCode("src/json_test/testFile.json");
         System.out.println(bridgeCode.getBridgeCode());
         try {
             Cpp_CodeMaker codeMaker=new Cpp_CodeMaker(bridgeCode.getBridgeCode());
